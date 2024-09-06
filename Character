@@ -1,0 +1,14 @@
+import random
+
+
+def dice_roll(sides, dice):
+    result = [random.randint(1, sides) for _ in range(dice)]
+    return result
+
+
+def charactristic():
+    result = dice_roll(6, 4)
+    result.remove(min(result))
+    str = sum(result)
+    return str
+print(charactristic())
